@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://todo-app-hnw7.onrender.com";
 
 let authSection = document.getElementById("authSection");
 let todoSection = document.getElementById("todoSection");

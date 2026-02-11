@@ -1,3 +1,5 @@
+const e = require("express");
+
 const BASE_URL = "https://todo-app-hnw7.onrender.com";
 
 let authSection = document.getElementById("authSection");
@@ -32,7 +34,8 @@ function showTodoSection() {
 
 //authorization
 
-loginButton.onclick = async function () {
+loginButton.onclick = async function (e) {
+    e.preventDefault();
     const username = usernameInput.value;
     const password = passwordInput.value;
 
@@ -55,7 +58,8 @@ loginButton.onclick = async function () {
     loadTodos();
 };
 
-registerButton.onclick = async function () {
+registerButton.onclick = async function (e) {
+    e.preventDefault();
     const username = usernameInput.value;
     const password = passwordInput.value;
     const res = await fetch(`${BASE_URL}/register`, {

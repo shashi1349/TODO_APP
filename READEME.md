@@ -85,8 +85,8 @@ The progress bar updates automatically when:
 ### 
 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/task-manager-app.git
-cd task-manager-app
+git clone https://github.com/shashi1349/TODO_APP.git
+cd todo_app
 
 2️⃣ Install backend dependencies
 cd backend
@@ -99,3 +99,13 @@ Server will run at:
 
 4️⃣ Open frontend
 Open frontend/index.html in a browser.
+
+## 🚀 Deployment
+
+- Frontend hosted on Netlify
+- Backend hosted on Render
+
+## 🌍 Live Demo
+
+- Frontend: https://todo-optimize.netlify.app/
+- Backend API: https://todo-app-hnw7.onrender.com

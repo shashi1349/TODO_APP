@@ -8,13 +8,14 @@ const app = express();
 
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "https://todo-optimize.netlify.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-  })
-);
+app.use(cors({
+  origin: "https://todo-optimize.netlify.app",
+  methods: ["GET","POST","PUT","DELETE"],
+  allowedHeaders: ["Content-Type","Authorization"],
+  credentials: true
+}));
+
+app.options("*", cors());
 
 const SECRET_KEY = "MY_SECRET_KEY";
 

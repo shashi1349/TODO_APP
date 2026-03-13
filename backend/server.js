@@ -58,7 +58,8 @@ app.post("/register", async (req, res) => {
   const hashedPassword = await bcrypt.hash(password, 10);
 
   db.run(
-   `INSERT INTO users (username, password) VALUES ('${username}', '${hashedPassword}')`,
+   "INSERT INTO users (username, password) VALUES (?, ?)",
+  [username, hashedPassword],
     err => {
       if (err) return res.status(400).send("User already exists");
       res.send("Registered successfully");

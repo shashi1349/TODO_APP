@@ -1,6 +1,6 @@
 
 
-const BASE_URL = "https://todo-app-hnw7.onrender.com";
+const BASE_URL = "https://todoapp-cwvk.onrender.com";
 
 let authSection = document.getElementById("authSection");
 let todoSection = document.getElementById("todoSection");

@@ -5,8 +5,16 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const app = express();
+
 app.use(express.json());
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "https://todo-optimize.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+  })
+);
 
 const SECRET_KEY = "MY_SECRET_KEY";
 
